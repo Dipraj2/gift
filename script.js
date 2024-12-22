@@ -1,4 +1,6 @@
 const giftBox = document.getElementById('giftBox');
+const giftImage = document.getElementById('giftImage');
+giftImage.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw29zFUGF-dpcuU82EOnnZe2IwowDRpU0POQ&s";
 const imagesContainer = document.getElementById('images');
 
 // Create multiple images to appear after gift opening
@@ -20,7 +22,7 @@ imageUrls.forEach(url => {
 giftBox.addEventListener('click', () => {
     // Hide the gift box when clicked
     //giftBox.classList.add('hide');
-    const imageElement = document.getElementById('giftBox'); imageElement.src = 'https://parspng.com/wp-content/uploads/2022/02/giftboxpng.parspng.com-4.png';
+    //const imageElement = document.getElementById('giftBox'); imageElement.src = 'https://parspng.com/wp-content/uploads/2022/02/giftboxpng.parspng.com-4.png';
 
     // Show images after a short delay
     setTimeout(() => {
@@ -34,8 +36,12 @@ giftBox.addEventListener('click', () => {
                 img.style.opacity = 1;
             }, index * 300); // Delay each image animation
         });
+        giftImage.src = 'https://parspng.com/wp-content/uploads/2022/02/giftboxpng.parspng.com-4.png';
     }, 1000);
-    //img.src = 'https://parspng.com/wp-content/uploads/2022/02/giftboxpng.parspng.com-4.png';
+   // giftBox.src = 'https://parspng.com/wp-content/uploads/2022/02/giftboxpng.parspng.com-4.png';
+    //function changeImageSource() { 
+   //     const img = document.getElementById('giftImage');
+    // New image source
     //  // Wait for gift box to disappear before showing images
 });
 
